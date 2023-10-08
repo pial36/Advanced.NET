@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "User Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>User Registration</h1>
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post))
+{
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" pattern="[a-zA-Z-.]{4,50}" required>
+
+    <br>
+    <br>
+
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId" pattern="[a-zA-Z0-9_-]{4,12}" required>
+
+    <br>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[a-z]{2})(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}$" required>
+    <small>Password format: First 4 characters must be uppercase and lowercase alphabets, and the next 4 must be a combination of special characters and numbers.</small>
+
+    <br>
+    <br>
+
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" pattern="[A-Z]{2}-\d{5}-[A-Z0-9]" required>
+    <small>ID format: XX-XXXXX-X</small>
+
+    <br>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" pattern="[A-Z]{2}-\d{5}-[A-Z0-9]+@student.aiub.edu" required>
+    <small>Email format: XX-XXXXX-X@student.aiub.edu</small>
+
+    <br>
+    <br>
+
+    <label for="dob">DOB:</label>
+    <input type="date" id="dob" name="dob" required>
+    <small>Date of Birth (DOB) must be valid and age should be over 18.</small>
+
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+}
