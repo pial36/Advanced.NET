@@ -1,0 +1,25 @@
+﻿
+
+@{
+    ViewBag.Title = "LandingPage";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <p> <b>Name: Pial Hassan Chowdhury</b></p>
+    <p>ID: 20-42972-1</p>
+    <p>Email: thejaster36@@gmail.com</p>
+    <p>Contact No: 123-456-7890</p>
+    <ul>
+        <li><a href="@Url.Action("Home1", "Home")">Home</a></li>
+        <li><a href="@Url.Action("Education", "Home")">Education</a></li>
+        <li><a href="@Url.Action("Projects", "Home")">Projects</a></li>
+        <li><a href="@Url.Action("PersonalInfo", "Home")">Personal Info</a></li>
+        <li><a href="@Url.Action("References", "Home")">References</a></li>
+    </ul>
+</body>
+</html>
